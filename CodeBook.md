@@ -1,26 +1,26 @@
-How columns were Derived?
+How  columns  were  Derived?
 
-##load needed libraries
-#Goal 1: Merges the training and the test sets to create one data set.
-##Step 1: download the file from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-##Step 2: Unzip the file, put an if statement based on the name from list.files()/ list.files('UCI HAR Dataset/') so this doesn't get unzipped every time
-##Step 3: Load the data from each of the files into a data table , load the library just in case , ang give the meanigful column names
-##create 2 new tables for test and train  and then rbind them , but before that add activity code decoding 
-#Goal 3: Uses descriptive activity names to name the activities in the data set.
-##getting clean column names, first everything to lower cawse and then replace all not a-z0-9 characters 
-#Goal 4: Appropriately labels the data set with descriptive variable names.
-##Assign the Column Names from Goal 3 
-#Goal 2: Extracts only the measurements on the mean and standard deviation for each measurement.
-##Grep the column names with dev/std then manually create a new table only with those columns 
-#Goal 5: From the data set in step 4, creates a second, independent tidy data set with the average of each VARIABLE for each ACTIVITY and each SUBJECT
-#Use aggregate function  to group by subject and activity name to find the average 
-#Goal 6: Write it to a csv file 
+##load  needed  libraries
+#Goal  1:  Merges  the  training  and  the  test  sets  to  create  one  data  set.
+##Step  1:  download  the  file  from  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+##Step  2:  Unzip  the  file,  put  an  if  statement  based  on  the  name  from  list.files()/  list.files('UCI  HAR  Dataset/')  so  this  doesn't  get  unzipped  every  time
+##Step  3:  Load  the  data  from  each  of  the  files  into  a  data  table  ,  load  the  library  just  in  case  ,  ang  give  the  meanigful  column  names
+##create  2  new  tables  for  test  and  train    and  then  rbind  them  ,  but  before  that  add  activity  code  decoding  
+#Goal  3:  Uses  descriptive  activity  names  to  name  the  activities  in  the  data  set.
+##getting  clean  column  names,  first  everything  to  lower  cawse  and  then  replace  all  not  a-z0-9  characters  
+#Goal  4:  Appropriately  labels  the  data  set  with  descriptive  variable  names.
+##Assign  the  Column  Names  from  Goal  3  
+#Goal  2:  Extracts  only  the  measurements  on  the  mean  and  standard  deviation  for  each  measurement.
+##Grep  the  column  names  with  dev/std  then  manually  create  a  new  table  only  with  those  columns  
+#Goal  5:  From  the  data  set  in  step  4,  creates  a  second,  independent  tidy  data  set  with  the  average  of  each  VARIABLE  for  each  ACTIVITY  and  each  SUBJECT
+#Use  aggregate  function    to  group  by  subject  and  activity  name  to  find  the  average  
+#Goal  6:  Write  it  to  a  csv  file  
 
 
-column_name	column description 
-subject	# a number 1 30 labeling subject
-activity_code	Number Mapepd to activity description 
-activity_description	Something like Walking
+column_name	column  description  
+subject	#  a  number  1  30  labeling  subject
+activity_code	Number  Mapepd  to  activity  description  
+activity_description	Something  like  Walking
 tbodyaccmeanx	tBodyAcc-mean()-X
 tbodyaccmeany	tBodyAcc-mean()-Y
 tbodyaccmeanz	tBodyAcc-mean()-Z
